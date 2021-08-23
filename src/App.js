@@ -67,21 +67,21 @@ function App() {
 
 	return (
 		<div className="App">
-			<div>
+            Person list Add/Edit/Search app:
+			<div className="pageHeader">
 				<SearchBar onUserInput={setSearch} />
 				<button
-					style={{ marginTop: '10px' }}
 					type="button"
 					onClick={addPersonDetailsView}
-					className="btn btn-success pull-right"
+					className="btn addPersonButton"
 				>
 					Add
 				</button>
 			</div>
 
 			<div className="personView">
-				<div>
-					<table border="1">
+				<div className="personTableList">
+					<table >
 						<thead>
 							<tr>
 								<th>Id</th>
@@ -92,9 +92,10 @@ function App() {
 						</thead>
 						<tbody>{getPersonList()}</tbody>
 					</table>
-				</div>
+                    </div>
+			
 
-				<div>
+				<div className="personUpdateView">
 					{personDetailsView == 'addView' && (
 						<div>
 							Add <div>id: {personList.length + 1}</div>
@@ -102,7 +103,7 @@ function App() {
 								name: <input type="text" ref={personName} />
 							</div>
 							<div>
-								email: <input type="text" ref={personEmail} />
+								email: <input type="email" ref={personEmail} />
 							</div>
 							<button
 								style={{ marginTop: '10px' }}
