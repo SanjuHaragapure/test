@@ -41,3 +41,27 @@
 .personView{
     display:flex;
 }
+
+.personView > * {
+    flex: 1 1 auto;
+  }
+
+  table {  
+    font-family:sans-serif;
+  }
+      th, td :nth-child(2) {
+        text-align:right;
+      }
+    table,  td {
+        padding:.25em .5em;
+        text-align:left;
+      background-color:rgb(177, 171, 171); 
+      color: black;   
+    }
+    table,  th {
+        padding:.25em .5em;
+        text-align:left;
+      background-color:rgb(91, 91, 168);
+      color:#fff;
+    }
+  

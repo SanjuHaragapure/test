@@ -53,7 +53,7 @@ function App() {
 
   function getPersonList(){
     return personList.filter(person => 
-        currentSearch === "" ? true: person.name==currentSearch ).map((person) => {
+        currentSearch === "" ? true: person.name.includes(currentSearch) ).map((person) => {
         return (
             <tr key={person.id} data-item={person} onClick={() => personEditView(person)}>
             <td>
