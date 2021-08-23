@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { useState, useRef } from 'react';
 import { SearchBar } from './SearchBar';
@@ -33,7 +32,7 @@ function App() {
 			if (!listEle) {
 				listEle = [];
 			}
-			if (ele.id != person.id) {
+			if (ele.id !== person.id) {
 				listEle.push(ele);
 			} else {
 				listEle.push(person);
@@ -96,7 +95,7 @@ function App() {
 			
 
 				<div className="personUpdateView">
-					{personDetailsView == 'addView' && (
+					{personDetailsView === 'addView' && (
 						<div>
 							Add <div>id: {personList.length + 1}</div>
 							<div>
@@ -115,7 +114,7 @@ function App() {
 							</button>
 						</div>
 					)}
-					{personDetailsView == 'EditView' && (
+					{personDetailsView === 'EditView' && (
 						<div>
 							Edit
 							<div>id: {personEdit.id}</div>
